@@ -27,6 +27,6 @@ export const User = () => {
         {/* <div>Username is {user?.name} </div>
         <div>User email is {user?.email} </div> */}
     </div>
-    //user can be null so have '?' apepar
+    //user can be null so have '?' appear
 
 }
