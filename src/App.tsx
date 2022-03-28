@@ -1,13 +1,17 @@
 import './App.css';
 import { Button } from './component/Button';
 import { Container } from './component/Container';
+import { Box } from './component/context/Box';
+import {ThemeContextProvider } from './component/context/ThemeContext';
+import { UserContextProvider } from './component/context/UserContext';
 import { Greet } from './component/Greet';
 import { Heading } from './component/Heading';
 import { Input } from './component/Input';
 import { Oscar } from './component/Oscar';
 import { Person } from './component/Person';
 import { PersonList } from './component/PersonList';
-import { User } from './component/state/User';
+// import { User } from './component/state/User';
+import { User } from './component/context/User';
 import { Status } from './component/Status';
 
 function App() {
@@ -59,7 +63,13 @@ function App() {
 
         {/* <Container style={{border:'15px solid skyblue', padding:'5rem', background:'yellow'}} /> */}
 
-       
+       {/* <ThemeContextProvider>
+         <Box/>
+       </ThemeContextProvider> */}
+
+      <UserContextProvider>
+        <User/>
+      </UserContextProvider>
 
     </div>
   );
