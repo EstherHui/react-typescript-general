@@ -1,5 +1,5 @@
 import './App.css';
-import { Button } from './component/Button';
+// import { Button } from './component/Button';
 import { Container } from './component/Container';
 import { Box } from './component/context/Box';
 import {ThemeContextProvider } from './component/context/ThemeContext';
@@ -13,6 +13,8 @@ import { PersonList } from './component/PersonList';
 // import { User } from './component/state/User';
 import { User } from './component/context/User';
 import { Status } from './component/Status';
+import {Counter} from './component/class/Counter';
+import {CustomButton} from './component/html/Button'
 
 function App() {
 
@@ -67,9 +69,15 @@ function App() {
          <Box/>
        </ThemeContextProvider> */}
 
-      <UserContextProvider>
+      {/* <UserContextProvider>
         <User/>
-      </UserContextProvider>
+      </UserContextProvider> */}
+
+      {/* <Counter message="The count value : " /> */}
+
+      <CustomButton variant='primary' onClick = {()=> console.log('Clicked')}>
+        Primary Button
+      </CustomButton>
 
     </div>
   );
